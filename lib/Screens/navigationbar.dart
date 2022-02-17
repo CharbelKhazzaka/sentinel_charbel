@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sentinel/Screens/patient_list.dart';
 import 'package:sentinel/Screens/patient_priority_list.dart';
@@ -33,7 +34,7 @@ class _NavBarState extends State<NavBar> {
         children: screens,
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.blue,
+        backgroundColor: Color.fromRGBO(18, 108, 242, 1),
         type: BottomNavigationBarType.fixed,
         selectedItemColor: Colors.blue[900],
         unselectedItemColor: Colors.white,

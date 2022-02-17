@@ -177,7 +177,7 @@ class _LogInState extends State<LogIn> {
                   child: ElevatedButton(
                     child: SizedBox(
                       height: MediaQuery.of(context).size.height * 0.08,
-                      width: MediaQuery.of(context).size.width * 0.6,
+                      width: MediaQuery.of(context).size.width * 0.8,
                       child: Center(
                         child: Text(
                           'LOG IN',
@@ -189,7 +189,7 @@ class _LogInState extends State<LogIn> {
                     style: ElevatedButton.styleFrom(
                       primary: Color.fromRGBO(205, 8, 27,1),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30),
+                        borderRadius: BorderRadius.circular(50),
                       ),
                     ),
                     onPressed: () {
