@@ -14,18 +14,19 @@ class _LogInState extends State<LogIn> {
   bool passwordVisible = true;
   bool checkBox = true;
   bool checkBoxValue = false;
+
   @override
   Widget build(BuildContext context) {
-    var mediaQueryHeight=MediaQuery.of(context).size.height;
-    var mediaQueryWidth=MediaQuery.of(context).size.width;
-    return
-      SafeArea(
-        child: Scaffold(
+    var mediaQueryHeight = MediaQuery.of(context).size.height;
+    var mediaQueryWidth = MediaQuery.of(context).size.width;
+    return SafeArea(
+      child: Scaffold(
         resizeToAvoidBottomInset: false,
         body: SingleChildScrollView(
           child: Form(
             key: _formkey,
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
                   height: MediaQuery.of(context).size.height * 0.3,
@@ -35,7 +36,9 @@ class _LogInState extends State<LogIn> {
                       Row(
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(left: mediaQueryWidth*0.2, top: mediaQueryHeight*0.1),
+                            padding: EdgeInsets.only(
+                                left: mediaQueryWidth * 0.2,
+                                top: mediaQueryHeight * 0.1),
                             child: Text(
                               'Welcome To ',
                               style: TextStyle(
@@ -46,7 +49,8 @@ class _LogInState extends State<LogIn> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(top: mediaQueryHeight*0.1),
+                            padding:
+                                EdgeInsets.only(top: mediaQueryHeight * 0.1),
                             child: Text(
                               'Sentinel',
                               style: TextStyle(
@@ -79,7 +83,7 @@ class _LogInState extends State<LogIn> {
                 Container(
                   height: MediaQuery.of(context).size.height * 0.03,
                   child: Padding(
-                    padding: EdgeInsets.only(right: mediaQueryWidth*0.3),
+                    padding: EdgeInsets.only(left: mediaQueryWidth * 0.05),
                     child: Text(
                       'Email address',
                       style: TextStyle(fontWeight: FontWeight.bold),
@@ -87,7 +91,8 @@ class _LogInState extends State<LogIn> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(20),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
                   child: TextFormField(
                     decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
@@ -110,7 +115,7 @@ class _LogInState extends State<LogIn> {
                 Container(
                   height: MediaQuery.of(context).size.height * 0.03,
                   child: Padding(
-                    padding: const EdgeInsets.only(right: 180),
+                    padding: EdgeInsets.only(left: mediaQueryWidth * 0.05),
                     child: Text(
                       'Password',
                       style: TextStyle(fontWeight: FontWeight.bold),
@@ -118,7 +123,8 @@ class _LogInState extends State<LogIn> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(20),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
                   child: TextFormField(
                     decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
@@ -166,7 +172,7 @@ class _LogInState extends State<LogIn> {
                     Text('Remember me'),
                     InkWell(
                         child: Padding(
-                          padding: const EdgeInsets.only(left: 80),
+                          padding: EdgeInsets.only(left: mediaQueryWidth * 0.3),
                           child: Text(
                             "Forgot password?",
                             style: TextStyle(
@@ -177,17 +183,18 @@ class _LogInState extends State<LogIn> {
                         onTap: () {}),
                   ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 20),
+                SizedBox(
+                  height: mediaQueryHeight * 0.03,
+                ),
+                Center(
                   child: ElevatedButton(
                     child: SizedBox(
                       height: MediaQuery.of(context).size.height * 0.08,
-                      width: MediaQuery.of(context).size.width * 0.8,
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 10),
+                      width: MediaQuery.of(context).size.width * 0.6,
+                      child: Center(
                         child: Text(
                           'LOG IN',
-                          style: TextStyle(fontSize: 30),
+                          style: TextStyle(fontSize: 20),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -216,7 +223,7 @@ class _LogInState extends State<LogIn> {
             ),
           ),
         ),
-    ),
-      );
+      ),
+    );
   }
 }
