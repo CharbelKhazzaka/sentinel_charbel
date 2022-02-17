@@ -9,7 +9,6 @@ class LogIn extends StatefulWidget {
 }
 
 class _LogInState extends State<LogIn> {
-  final _formkey = GlobalKey<FormState>();
 
   bool passwordVisible = true;
   bool checkBox = true;
@@ -23,8 +22,6 @@ class _LogInState extends State<LogIn> {
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         body: SingleChildScrollView(
-          child: Form(
-            key: _formkey,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -100,13 +97,6 @@ class _LogInState extends State<LogIn> {
                       ),
                       border: OutlineInputBorder(),
                     ),
-                    validator: (value) {
-                      if (value!.isEmpty) {
-                        return 'Please enter your Email';
-                      } else {
-                        return null;
-                      }
-                    },
                   ),
                 ),
                 SizedBox(
@@ -145,13 +135,6 @@ class _LogInState extends State<LogIn> {
                     ),
                     keyboardType: TextInputType.visiblePassword,
                     obscureText: passwordVisible,
-                    validator: (value) {
-                      if (value!.isEmpty) {
-                        return 'Please enter your password';
-                      } else {
-                        return null;
-                      }
-                    },
                   ),
                 ),
                 Row(
@@ -206,9 +189,7 @@ class _LogInState extends State<LogIn> {
                       ),
                     ),
                     onPressed: () {
-                      if (!_formkey.currentState!.validate()) {
-                        return;
-                      }
+
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => NavBar()),
@@ -223,7 +204,6 @@ class _LogInState extends State<LogIn> {
             ),
           ),
         ),
-      ),
     );
   }
 }
