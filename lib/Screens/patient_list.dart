@@ -18,6 +18,8 @@ class Patient {
 class _ClientListState extends State<ClientList> {
   @override
   Widget build(BuildContext context) {
+    var mediaQueryHeight = MediaQuery.of(context).size.height;
+    var mediaQueryWidth = MediaQuery.of(context).size.width;
     const allPatients = [
       Patient(title: 'Olivia Bale'),
       Patient(title: 'John Doe'),
@@ -40,63 +42,61 @@ class _ClientListState extends State<ClientList> {
               color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
         ),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
-              color: Colors.blue,
-              width: double.infinity,
-              height: MediaQuery.of(context).size.height * 0.1,
-              child: Padding(
-                padding: const EdgeInsets.only(left: 70, right: 70),
-                child: TextField(
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.white,
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.grey, width: 1),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.grey, width: 1),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    hintText: 'Search patient',
-                    prefixIcon: Icon(
-                      Icons.search,
-                      color: Colors.grey,
-                    ),
-                    suffixIcon: Icon(
-                      Icons.sort,
-                      color: Colors.blue,
-                    ),
-                    hintStyle: TextStyle(
-                      color: Colors.grey,
-                    ),
-                    contentPadding: EdgeInsets.only(left: 30),
+      body: Column(
+        children: [
+          Container(
+            color: Colors.blue,
+            width: mediaQueryWidth,
+            height: MediaQuery.of(context).size.height * 0.1,
+            child: Padding(
+              padding: EdgeInsets.only(left:mediaQueryWidth*0.1,right: mediaQueryWidth*0.1),
+              child: TextField(
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.white,
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.grey, width: 1),
+                    borderRadius: BorderRadius.circular(20),
                   ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.grey, width: 1),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  hintText: 'Search patient',
+                  prefixIcon: Icon(
+                    Icons.search,
+                    color: Colors.grey,
+                  ),
+                  suffixIcon: Icon(
+                    Icons.sort,
+                    color: Colors.blue,
+                  ),
+                  hintStyle: TextStyle(
+                    color: Colors.grey,
+                  ),
+                  contentPadding: EdgeInsets.only(left: mediaQueryWidth*0.3),
                 ),
               ),
             ),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 1,
-              child: ListView.builder(
-                itemCount: Patients.length,
-                itemBuilder: (context, index) {
-                  final Patient = Patients[index];
-                  return Container(
-                    child: ListTile(
-                      title: Text(
-                        Patient.title,
-                        style: TextStyle(color: Colors.black, fontSize: 20),
-                      ),
+          ),
+          SizedBox(
+            child: ListView.separated(
+              separatorBuilder: (context, index) => Divider(color: Colors.grey,thickness: 0.5,),
+              itemCount: Patients.length,
+              itemBuilder: (context, index) {
+                final Patient = Patients[index];
+                return Container(
+                  child: ListTile(
+                    title: Text(
+                      Patient.title,
+                      style: TextStyle(color: Colors.black, fontSize: 20),
                     ),
-                  );
-                },
-              ),
+                  ),
+                );
+              },
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

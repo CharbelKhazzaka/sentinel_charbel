@@ -17,6 +17,8 @@ class Patient {
 class _ClientPriorityState extends State<ClientPriority> {
   @override
   Widget build(BuildContext context) {
+    var mediaQueryHeight = MediaQuery.of(context).size.height;
+    var mediaQueryWidth = MediaQuery.of(context).size.width;
     const allPatients = [
       Patient(title: 'Olivia Bale'),
       Patient(title: 'John Doe'),
@@ -48,7 +50,7 @@ class _ClientPriorityState extends State<ClientPriority> {
               width: double.infinity,
               height: MediaQuery.of(context).size.height * 0.1,
               child: Padding(
-                padding: const EdgeInsets.only(left: 70, right: 70),
+                padding: EdgeInsets.only(left: mediaQueryWidth*0.1, right:mediaQueryWidth*0.1),
                 child: TextField(
                   decoration: InputDecoration(
                     filled: true,
@@ -73,16 +75,15 @@ class _ClientPriorityState extends State<ClientPriority> {
                     hintStyle: TextStyle(
                       color: Colors.grey,
                     ),
-                    contentPadding: EdgeInsets.only(left: 30),
+                    contentPadding: EdgeInsets.only(left: mediaQueryWidth*0.3),
                   ),
                 ),
               ),
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 1,
-              child: ListView.builder(
+              child: ListView.separated(
                 itemCount: Patients.length,
-                itemExtent: 50,
+                separatorBuilder: (context, index) => Divider(color: Colors.grey,thickness: 0.5,),
                 itemBuilder: (context, index) {
                   final Patient = Patients[index];
                   return Container(

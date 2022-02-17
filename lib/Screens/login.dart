@@ -184,9 +184,9 @@ class _LogInState extends State<LogIn> {
                       ),
                     ),
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.red[700],
+                      primary: Color.fromRGBO(205, 8, 27,1),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15),
+                        borderRadius: BorderRadius.circular(30),
                       ),
                     ),
                     onPressed: () {
