@@ -26,7 +26,7 @@ class _LogInState extends State<LogIn> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  height: MediaQuery.of(context).size.height * 0.3,
+                  height: MediaQuery.of(context).size.height * 0.35,
                   width: MediaQuery.of(context).size.width,
                   child: Column(
                     children: [
@@ -69,6 +69,7 @@ class _LogInState extends State<LogIn> {
                       image: AssetImage(
                         'assets/background.jpg',
                       ),
+                      fit: BoxFit.cover,
                       colorFilter: ColorFilter.mode(
                           Colors.black.withOpacity(0.2), BlendMode.dstATop),
                     ),
