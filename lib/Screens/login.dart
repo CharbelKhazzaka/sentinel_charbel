@@ -191,16 +191,14 @@ class _LogInState extends State<LogIn> {
                     ),
                     onPressed: () {
 
-                      Navigator.push(
+                      Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(builder: (context) => NavBar()),
                       );
                     },
                   ),
                 ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.1,
-                )
+
               ],
             ),
           ),
