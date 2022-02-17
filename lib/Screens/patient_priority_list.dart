@@ -30,24 +30,24 @@ class _ClientPriorityState extends State<ClientPriority> {
       Patient(title: 'Baldwin Harold'),
     ];
     List<Patient> Patients = allPatients;
-    return Scaffold(
-      resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        backgroundColor: Colors.red,
-        elevation: 0,
-        title: Text(
-          'Patient Priority List',
-          style: TextStyle(
-              color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+    return SafeArea(
+      child: Scaffold(
+        resizeToAvoidBottomInset: false,
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          backgroundColor: Colors.red,
+          elevation: 0,
+          title: Text(
+            'Patient Priority List',
+            style: TextStyle(
+                color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+          ),
         ),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
+        body: Column(
           children: [
             Container(
               color: Colors.red,
-              width: double.infinity,
+              width: mediaQueryWidth,
               height: MediaQuery.of(context).size.height * 0.1,
               child: Padding(
                 padding: EdgeInsets.only(left: mediaQueryWidth*0.1, right:mediaQueryWidth*0.1),
@@ -81,6 +81,7 @@ class _ClientPriorityState extends State<ClientPriority> {
               ),
             ),
             SizedBox(
+              height: mediaQueryHeight*0.7,
               child: ListView.separated(
                 itemCount: Patients.length,
                 separatorBuilder: (context, index) => Divider(color: Colors.grey,thickness: 0.5,),

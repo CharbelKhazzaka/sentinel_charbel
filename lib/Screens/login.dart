@@ -138,34 +138,37 @@ class _LogInState extends State<LogIn> {
                     obscureText: passwordVisible,
                   ),
                 ),
-                Row(
-                  children: [
-                    IconButton(
-                      icon: Icon(
-                        checkBox
-                            ? Icons.check_box_outline_blank
-                            : Icons.check_box,
-                        color: Colors.blue,
-                      ),
-                      onPressed: () {
-                        setState(() {
-                          checkBox = !checkBox;
-                        });
-                      },
-                    ),
-                    Text('Remember me'),
-                    InkWell(
-                        child: Padding(
-                          padding: EdgeInsets.only(left: mediaQueryWidth * 0.3),
+                Padding(
+                  padding:  EdgeInsets.symmetric(horizontal: mediaQueryWidth*0.03),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(children: [
+                        IconButton(
+                          icon: Icon(
+                            checkBox
+                                ? Icons.check_box_outline_blank
+                                : Icons.check_box,
+                            color: Colors.blue,
+                          ),
+                          onPressed: () {
+                            setState(() {
+                              checkBox = !checkBox;
+                            });
+                          },
+                        ),
+                        Text('Remember me'),
+                      ],),
+                      InkWell(
                           child: Text(
                             "Forgot password?",
                             style: TextStyle(
                                 color: Colors.blue,
                                 decoration: TextDecoration.underline),
                           ),
-                        ),
-                        onTap: () {}),
-                  ],
+                          onTap: () {}),
+                    ],
+                  ),
                 ),
                 SizedBox(
                   height: mediaQueryHeight * 0.03,
