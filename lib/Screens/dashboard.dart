@@ -81,10 +81,14 @@ class _DashboardState extends State<Dashboard> {
                         children: [
                           Row(
                             children: [
-                              Text(
-                                'Blood Oxygen',
-                                style: TextStyle(fontSize: 16,fontFamily:'Roboto'),
+                              Padding(
+                                padding: EdgeInsets.only(left: mediaQueryWidth*0.1),
+                                child: Text(
+                                  'Blood Oxygen',
+                                  style: TextStyle(fontSize: 16,fontFamily:'Roboto'),
+                                ),
                               ),
+                              Image.asset('assets/bloodOxy.png',width:mediaQueryWidth*0.1),
                             ],
                           ),
                           SizedBox(height: mediaQueryHeight*0.03,),
@@ -122,9 +126,17 @@ class _DashboardState extends State<Dashboard> {
                       width: mediaQueryWidth * 0.49,
                       child: Column(
                         children: [
-                          Text(
-                            'Blood Pressure',
-                            style: TextStyle(fontSize: 16,fontFamily:'Roboto'),
+                          Row(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.only(left: mediaQueryWidth*0.1),
+                                child: Text(
+                                  'Blood Pressure',
+                                  style: TextStyle(fontSize: 16,fontFamily:'Roboto'),
+                                ),
+                              ),
+                              Image.asset('assets/white-blood.png',width:mediaQueryWidth*0.1),
+                            ],
                           ),
                           SizedBox(height: mediaQueryHeight*0.03,),
                           Text(
@@ -183,9 +195,17 @@ class _DashboardState extends State<Dashboard> {
                       width: mediaQueryWidth * 0.49,
                       child: Column(
                         children: [
-                          Text(
-                            'Body Temperature',
-                            style: TextStyle(fontSize: 16,fontFamily:'Roboto'),
+                          Row(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.only(left: mediaQueryWidth*0.03),
+                                child: Text(
+                                  'Body Temperature',
+                                  style: TextStyle(fontSize: 16,fontFamily:'Roboto'),
+                                ),
+                              ),
+                              Image.asset('assets/heart.png',width:mediaQueryWidth*0.1,)
+                            ],
                           ),
                           SizedBox(height: mediaQueryHeight*0.03),
                           Text(
@@ -222,9 +242,17 @@ class _DashboardState extends State<Dashboard> {
                       width: mediaQueryWidth * 0.49,
                       child: Column(
                         children: [
-                          Text(
-                            'Heart Rate',
-                            style: TextStyle(fontSize: 16,fontFamily:'Roboto'),
+                          Row(
+                            children: [
+                              Padding(
+                                padding:EdgeInsets.only(left:mediaQueryWidth*0.1),
+                                child: Text(
+                                  'Heart Rate',
+                                  style: TextStyle(fontSize: 16,fontFamily:'Roboto'),
+                                ),
+                              ),
+                              Image.asset('assets/heart.png',width: mediaQueryWidth*0.1,),
+                            ],
                           ),
                           SizedBox(height:mediaQueryHeight*0.03),
                           Text(
