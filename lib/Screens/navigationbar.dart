@@ -49,11 +49,11 @@ class _NavBarState extends State<NavBar> {
               label: 'patients',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.person),
+              icon: Image.asset('assets/whiteblood.png',width: MediaQuery.of(context).size.width*0.1,),
               label: 'patient priority',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.person_add_alt_sharp),
+              icon:Image.asset('assets/whiteblood.png',width: MediaQuery.of(context).size.width*0.1,),
               label: 'patientslist',
             ),
             BottomNavigationBarItem(

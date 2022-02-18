@@ -70,7 +70,7 @@ class _DashboardState extends State<Dashboard> {
                 ],
               ),
               SizedBox(
-                height: mediaQueryHeight * 0.03,
+                height: mediaQueryHeight * 0.05,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -184,7 +184,7 @@ class _DashboardState extends State<Dashboard> {
                   ),
                 ],
               ),
-              SizedBox(height: mediaQueryHeight*0.05,),
+              SizedBox(height: mediaQueryHeight*0.001,),
               SizedBox(
                 height: mediaQueryHeight * 0.03,
               ),
