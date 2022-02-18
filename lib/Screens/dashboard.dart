@@ -135,7 +135,7 @@ class _DashboardState extends State<Dashboard> {
                                   style: TextStyle(fontSize: 16,fontFamily:'Roboto'),
                                 ),
                               ),
-                              Image.asset('assets/white-blood.png',width:mediaQueryWidth*0.1),
+                              Image.asset('assets/whiteblood.png',width:mediaQueryWidth*0.1),
                             ],
                           ),
                           SizedBox(height: mediaQueryHeight*0.03,),
@@ -204,7 +204,7 @@ class _DashboardState extends State<Dashboard> {
                                   style: TextStyle(fontSize: 16,fontFamily:'Roboto'),
                                 ),
                               ),
-                              Image.asset('assets/heart.png',width:mediaQueryWidth*0.1,)
+                              Image.asset('assets/temp.png',width:mediaQueryWidth*0.1,)
                             ],
                           ),
                           SizedBox(height: mediaQueryHeight*0.03),

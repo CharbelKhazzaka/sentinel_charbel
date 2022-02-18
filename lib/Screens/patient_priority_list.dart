@@ -73,7 +73,7 @@ class _ClientPriorityState extends State<ClientPriority> {
                       Icons.search,
                       color: Colors.grey,
                     ),
-                   suffix: Image.asset('assets/down,-filter,-list,-sort.png',width: mediaQueryWidth*0.1,color: Colors.blue,),
+                   suffixIcon: Image.asset('assets/down,-filter,-list,-sort.png',width: mediaQueryWidth*0.1,color: Colors.blue,),
                     hintText: 'Search patient',
                     hintStyle: TextStyle(
                       color: Colors.grey,fontFamily:'Roboto',
