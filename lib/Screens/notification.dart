@@ -80,19 +80,19 @@ class _NotificationsState extends State<Notifications> {
                         ),
                         Row(
                           children: [
-                            Text('High on weed',style: TextStyle(fontSize: 15),),
-                            Text('420%',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                            Text('High on weed ',style: TextStyle(fontSize: 15,fontFamily:'Roboto'),),
+                            Text('420%',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,fontFamily:'Roboto'),),
                           ],
                         ),
                       ],
                     ),
                     trailing: Column(
                       children: [
-                        Text('Today,2:47 pm',style: TextStyle(color: Colors.grey,fontSize: 16),),
+                        Text('Today,2:47 pm',style: TextStyle(color: Colors.grey,fontSize: 16,fontFamily:'Roboto'),),
                         Container(
                           child: Text(
                             '1',
-                            style: TextStyle(color: Colors.white, fontSize: 25),
+                            style: TextStyle(color: Colors.white, fontSize: 25,fontFamily:'Roboto'),
                           ),
                         ),
                       ],

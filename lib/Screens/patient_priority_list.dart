@@ -43,7 +43,7 @@ class _ClientPriorityState extends State<ClientPriority> {
         title: Text(
           'Patient Priority List',
           style: TextStyle(
-              color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+              color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold,fontFamily:'Roboto'),
         ),
       ),
       body: SingleChildScrollView(
@@ -102,7 +102,7 @@ class _ClientPriorityState extends State<ClientPriority> {
                     child: ListTile(
                       title: Text(
                         Patient.title,
-                        style: TextStyle(color: Colors.black, fontSize: 20),
+                        style: TextStyle(color: Colors.black, fontSize: 20,fontFamily:'Roboto'),
                       ),
                     ),
                   );

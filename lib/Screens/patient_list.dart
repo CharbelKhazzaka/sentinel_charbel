@@ -40,7 +40,7 @@ class _ClientListState extends State<ClientList> {
         title: Text(
           'Patient List',
           style: TextStyle(
-              color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+              color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold,fontFamily:'Roboto'),
         ),
       ),
       body: SingleChildScrollView(
@@ -93,7 +93,7 @@ class _ClientListState extends State<ClientList> {
                     child: ListTile(
                       title: Text(
                         Patient.title,
-                        style: TextStyle(color: Colors.black, fontSize: 20),
+                        style: TextStyle(color: Colors.black, fontSize: 20,fontFamily:'Roboto'),
                       ),
                     ),
                   );
