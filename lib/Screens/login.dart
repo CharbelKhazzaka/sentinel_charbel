@@ -35,32 +35,33 @@ class _LogInState extends State<LogIn> {
                           Padding(
                             padding: EdgeInsets.only(
                                 left: mediaQueryWidth * 0.2,
-                                top: mediaQueryHeight * 0.1),
+                                top: mediaQueryHeight * 0.13),
                             child: Text(
                               'Welcome To ',
                               style: TextStyle(
                                 fontSize: 25,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black,
+                                  fontFamily:'Roboto'
                               ),
                             ),
                           ),
                           Padding(
                             padding:
-                                EdgeInsets.only(top: mediaQueryHeight * 0.1),
+                                EdgeInsets.only(top: mediaQueryHeight * 0.13),
                             child: Text(
                               'Sentinel',
                               style: TextStyle(
                                   fontSize: 25,
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.red),
+                                  color: Colors.red,fontFamily:'Roboto'),
                             ),
                           ),
                         ],
                       ),
                       Text(
                         'Health analytics',
-                        style: TextStyle(fontSize: 20, color: Colors.black),
+                        style: TextStyle(fontSize: 20, color: Colors.black,fontFamily:'Roboto'),
                       ),
                     ],
                   ),
@@ -84,7 +85,7 @@ class _LogInState extends State<LogIn> {
                     padding: EdgeInsets.only(left: mediaQueryWidth * 0.05),
                     child: Text(
                       'Email address',
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(fontWeight: FontWeight.bold,fontFamily:'Roboto'),
                     ),
                   ),
                 ),
@@ -109,7 +110,7 @@ class _LogInState extends State<LogIn> {
                     padding: EdgeInsets.only(left: mediaQueryWidth * 0.05),
                     child: Text(
                       'Password',
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(fontWeight: FontWeight.bold,fontFamily:'Roboto'),
                     ),
                   ),
                 ),
@@ -163,7 +164,7 @@ class _LogInState extends State<LogIn> {
                           child: Text(
                             "Forgot password?",
                             style: TextStyle(
-                                color: Colors.blue,
+                                color: Colors.blue,fontFamily:'Roboto',
                                 decoration: TextDecoration.underline),
                           ),
                           onTap: () {}),
@@ -177,11 +178,11 @@ class _LogInState extends State<LogIn> {
                   child: ElevatedButton(
                     child: SizedBox(
                       height: MediaQuery.of(context).size.height * 0.08,
-                      width: MediaQuery.of(context).size.width * 0.6,
+                      width: MediaQuery.of(context).size.width * 0.8,
                       child: Center(
                         child: Text(
                           'LOG IN',
-                          style: TextStyle(fontSize: 20),
+                          style: TextStyle(fontSize: 20,fontFamily:'Roboto'),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -189,7 +190,7 @@ class _LogInState extends State<LogIn> {
                     style: ElevatedButton.styleFrom(
                       primary: Color.fromRGBO(205, 8, 27,1),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30),
+                        borderRadius: BorderRadius.circular(50),
                       ),
                     ),
                     onPressed: () {
