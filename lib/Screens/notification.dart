@@ -25,14 +25,11 @@ class _NotificationsState extends State<Notifications> {
       Patient(title: 'John Doe'),
       Patient(title: 'Amelia Charlotte'),
       Patient(title: 'Baldwin Harold'),
-      Patient(title: 'Jane Bale'),
-      Patient(title: 'John Doe'),
-      Patient(title: 'Amelia Charlotte'),
-      Patient(title: 'Baldwin Harold'),
     ];
     List<Patient> Patients = allPatients;
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
           automaticallyImplyLeading: false,
           title: Text(
@@ -51,13 +48,13 @@ class _NotificationsState extends State<Notifications> {
           toolbarHeight: 125,
         ),
         body: SizedBox(
-          height: MediaQuery.of(context).size.height * 1,
+          height: mediaqueryHeight * 1,
           child: ListView.separated(
             separatorBuilder: (context, index) => Divider(color: Colors.grey,thickness: 0.5,),
             itemCount: 3,
             itemBuilder: (context, index) {
               final Patient = Patients[index];
-              return Card(
+              return Container(
                 child: Padding(
                   padding: EdgeInsets.only(top: mediaqueryHeight * 0.06),
                   child: ListTile(
@@ -65,10 +62,10 @@ class _NotificationsState extends State<Notifications> {
                     leading: CircleAvatar(
                       radius: 30,
                       child: ClipRRect(
-                        child: Image.asset('assets/blood1.png'),
+                        child: Image.asset('assets/red.png'),
                         borderRadius: BorderRadius.circular(50.0),
                       ),
-                      backgroundColor: Colors.grey,
+                      backgroundColor: Colors.white,
                     ),
                     title: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -80,21 +77,15 @@ class _NotificationsState extends State<Notifications> {
                         ),
                         Row(
                           children: [
-                            Text('High on weed ',style: TextStyle(fontSize: 15,fontFamily:'Roboto'),),
-                            Text('420%',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,fontFamily:'Roboto'),),
+                            Text('High blood oxygen',style: TextStyle(fontSize: 15,fontFamily:'Roboto'),),
+                            Text('50%',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,fontFamily:'Roboto'),),
                           ],
                         ),
                       ],
                     ),
                     trailing: Column(
-                      children: [
+                      children: [Icon(Icons.check,color: Colors.green,),
                         Text('Today,2:47 pm',style: TextStyle(color: Colors.grey,fontSize: 16,fontFamily:'Roboto'),),
-                        Container(
-                          child: Text(
-                            '1',
-                            style: TextStyle(color: Colors.white, fontSize: 25,fontFamily:'Roboto'),
-                          ),
-                        ),
                       ],
                     ),
                   ),
