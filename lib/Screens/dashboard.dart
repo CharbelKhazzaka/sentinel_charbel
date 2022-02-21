@@ -88,7 +88,7 @@ class _DashboardState extends State<Dashboard> {
                                   style: TextStyle(fontSize: 16,fontFamily:'Roboto'),
                                 ),
                               ),
-                              Image.asset('assets/bloodOxy.png',width:mediaQueryWidth*0.1),
+                              Image.asset('assets/images/bloodOxy.png',width:mediaQueryWidth*0.1),
                             ],
                           ),
                           SizedBox(height: mediaQueryHeight*0.03,),
@@ -135,7 +135,7 @@ class _DashboardState extends State<Dashboard> {
                                   style: TextStyle(fontSize: 16,fontFamily:'Roboto'),
                                 ),
                               ),
-                              Image.asset('assets/whiteblood.png',width:mediaQueryWidth*0.1),
+                              Image.asset('assets/images/whiteblood.png',width:mediaQueryWidth*0.1),
                             ],
                           ),
                           SizedBox(height: mediaQueryHeight*0.03,),
@@ -198,16 +198,16 @@ class _DashboardState extends State<Dashboard> {
                           Row(
                             children: [
                               Padding(
-                                padding: EdgeInsets.only(left: mediaQueryWidth*0.03),
+                                padding: EdgeInsets.only(left: mediaQueryWidth*0.05),
                                 child: Text(
                                   'Body Temperature',
                                   style: TextStyle(fontSize: 16,fontFamily:'Roboto'),
                                 ),
                               ),
-                              Image.asset('assets/temp.png',width:mediaQueryWidth*0.1,)
+                              Image.asset('assets/images/temp.png',width:mediaQueryWidth*0.1,)
                             ],
                           ),
-                          SizedBox(height: mediaQueryHeight*0.03),
+                          SizedBox(height: mediaQueryHeight*0.02),
                           Text(
                             '$bodytemp',
                             style: TextStyle(fontSize: 46, color: Colors.blue,fontFamily:'Roboto'),
@@ -219,7 +219,7 @@ class _DashboardState extends State<Dashboard> {
                           ),
                           Padding(
                             padding:
-                                EdgeInsets.only(top: mediaQueryHeight * 0.05),
+                                EdgeInsets.only(top: mediaQueryHeight * 0.04),
                             child: Text(
                               bodytemph == 1
                                   ? '$bodytemph hour ago'
@@ -251,7 +251,7 @@ class _DashboardState extends State<Dashboard> {
                                   style: TextStyle(fontSize: 16,fontFamily:'Roboto'),
                                 ),
                               ),
-                              Image.asset('assets/heart.png',width: mediaQueryWidth*0.1,),
+                              Image.asset('assets/images/heart.png',width: mediaQueryWidth*0.1,),
                             ],
                           ),
                           SizedBox(height:mediaQueryHeight*0.03),

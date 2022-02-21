@@ -46,14 +46,14 @@ class _NavBarState extends State<NavBar> {
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.dashboard_rounded),
-              label: 'patients',
+              label: 'Dashboard',
             ),
             BottomNavigationBarItem(
-              icon: Image.asset('assets/whiteblood.png',width: MediaQuery.of(context).size.width*0.1,),
+              icon: ImageIcon(AssetImage('assets/images/person_health.png'),),
               label: 'patient priority',
             ),
             BottomNavigationBarItem(
-              icon:Image.asset('assets/whiteblood.png',width: MediaQuery.of(context).size.width*0.1,),
+              icon:ImageIcon(AssetImage('assets/images/person_add.png',)),
               label: 'patientslist',
             ),
             BottomNavigationBarItem(

@@ -73,7 +73,7 @@ class _LogInState extends State<LogIn> {
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(
-                      'assets/background.jpg',
+                      'assets/images/background.jpg',
                     ),
                     fit: BoxFit.cover,
                     colorFilter: ColorFilter.mode(
@@ -85,7 +85,7 @@ class _LogInState extends State<LogIn> {
                 height: MediaQuery.of(context).size.height * 0.04,
               ),
               Container(
-                height: MediaQuery.of(context).size.height * 0.03,
+                height: MediaQuery.of(context).size.height * 0.02,
                 child: Padding(
                   padding: EdgeInsets.only(left: mediaQueryWidth * 0.05),
                   child: Text(
@@ -111,7 +111,7 @@ class _LogInState extends State<LogIn> {
                 height: MediaQuery.of(context).size.height * 0.03,
               ),
               Container(
-                height: MediaQuery.of(context).size.height * 0.03,
+                height: MediaQuery.of(context).size.height * 0.02,
                 child: Padding(
                   padding: EdgeInsets.only(left: mediaQueryWidth * 0.05),
                   child: Text(
@@ -155,24 +155,19 @@ class _LogInState extends State<LogIn> {
                     Row(
                       children: [
                         IconButton(
-                          icon: Icon(
-                            checkBox
-                                ? Icons.check_box_outline_blank
-                                : Icons.check_box,
-                          ),
+                          icon: checkBox
+                              ? Icon(
+                             Icons.check_box_outline_blank) : Icon(Icons.check_box, color: Colors.blue,),
                           onPressed: () {
                             setState(() {
                               checkBox = !checkBox;
-                            });
-                            setState(() {
-                              _iconColor = Colors.blue;
                             });
                           },
                         ),
                         Text('Remember me'),
                       ],
                     ),
-                    InkWell(
+                    TextButton(
                         child: Text(
                           "Forgot password?",
                           style: TextStyle(
@@ -180,7 +175,7 @@ class _LogInState extends State<LogIn> {
                               fontFamily: 'Roboto',
                               decoration: TextDecoration.underline),
                         ),
-                        onTap: () {}),
+                      onPressed: () {  },),
                   ],
                 ),
               ),

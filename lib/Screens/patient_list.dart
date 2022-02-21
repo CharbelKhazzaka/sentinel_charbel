@@ -69,7 +69,7 @@ class _ClientListState extends State<ClientList> {
                       Icons.search,
                       color: Colors.grey,
                     ),
-                    suffixIcon: Image.asset('assets/down,-filter,-list,-sort.png',width: mediaQueryWidth*0.1,color: Colors.blue,),
+                    suffixIcon: Image.asset('assets/images/down,-filter,-list,-sort.png',width: mediaQueryWidth*0.1,color: Colors.blue,),
                     hintStyle: TextStyle(
                       color: Colors.grey,fontFamily:'Roboto',
                     ),
